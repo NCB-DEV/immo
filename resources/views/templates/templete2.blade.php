@@ -7,7 +7,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('lightbox/dist/css/lightbox.min.css') }}">
-
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 </head>
 <body>
 @include('templates.menu')

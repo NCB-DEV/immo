@@ -50,7 +50,6 @@ A vendre
                                </a>
                             </div>
 
-
                     @endforeach
                 </div>
             </div>
@@ -97,6 +96,8 @@ A vendre
         {{ $nonboost->links() }}
     </div>
 </div>
+
+
 
 @endsection
 

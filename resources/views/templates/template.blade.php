@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
 </head>
 <body>
+    @livewireStyles
 @include('templates.menu')
 <div class="container">
     <div class="row">
@@ -86,12 +88,12 @@
         </div>
     </div>
 </footer>
-
+@livewireScripts
 <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
 <script src="{{ asset('lightbox/dist/js/lightbox.min.js') }}"></script>
 <script src="{{ asset('dist/chart.js') }}"></script>
 <script src="{{ asset('js/share.js') }}"></script>
-<script src="{{ asset('js/chart.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
 </body>
 
 </html>
