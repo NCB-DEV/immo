@@ -3,16 +3,21 @@
     margin: 0;
     padding: 0;
 }
-
+.menus{
+    position: fixed;
+    width: 100%;
+}
 nav
 {
     background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: 60px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px black;
+    z-index: 1000000;
+
 }
 .menu{
     display: none;
@@ -23,9 +28,11 @@ nav
 }
 .menu-toggle{
     cursor: pointer;
-    font-size: 24px;
+    font-size: 30px;
     border-radius: 10px;
-    background-color: transparent;
+    width: 50px;
+    background-color: rgb(247, 234, 160);
+    text-align: center;
 }
 .menu li{
     list-style: none;
@@ -35,36 +42,19 @@ nav
     color: black;
     text-decoration: none;
 }
-.sous-menu{
-    display: none;
+.ham{
+    color: rgb(150, 130, 30);
+    width: 100px;
 }
-.agence{
-    cursor: pointer;
+.maison::before{
+    content: "\01F3E0";
+    color: goldenrod;
 }
-.hamburger-lines{
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    transition: background-color 0.3s ease;
+nav h1{
+    color: goldenrod;
+    font-weight: bold;
 }
-.menu-toggle .hamburger-lines{
-    transform: rotate(45deg) translate(10px,-10px);
-}
-.menu-toggle.active .hamburger-lines::after,.menu-toggle.active .hamburger-lines::before{
-    content: "";
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color: black;
-    transition: background-color 0.3s ease;
-}
-.menu-toggle.active .hamburger-lines::after{
-    transform: rotate(-45deg) translate(10px,10px);
-}
-.voir{
-    display: block;
-}
+
 @media (max-width:768px){
     nav .menu{
         display: flex;
@@ -72,16 +62,18 @@ nav
         align-items: flex-start;
         width: 100%;
         position: absolute;
-        top: 100%;
+        bottom: 100%;
         left: 0;
         background-color: #fff;
         transition: all 0.3s ease;
-        
+        z-index: -1;
     }
+
     nav .menu.show{
-        top: 52px;
+        bottom: -245px;
         display: flex;
         padding: auto;
+        z-index: -1;
     }
     .menu-toggle{
         display: block;

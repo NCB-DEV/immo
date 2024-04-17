@@ -62,4 +62,6 @@
 <script src="{{ asset('dist/chart.js') }}"></script>
 <script src="{{ asset('js/share.js') }}"></script>
 <script src="{{ asset('js/chart.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('js/typelighter.min.js') }}"></script>
 </html>
