@@ -7,16 +7,21 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
     @livewireStyles
 @include('templates.menu')
-<div class="container">
+<div class="container officiel">
     <div class="row">
-        icon/Immobilier/@yield('titre_page')
+        <div class="col-sm-12">
+            <div class="immo">
+                <span class="maison"></span>/Immobilier/@yield('titre_page')
+            </div>
+        </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid officiel">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <form action="#" method="post">
@@ -26,28 +31,17 @@
         </div>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-            <!--------requete ajax pour affiher les elements-------->
-            Trié par <form action="" method="post">
-                <select name="selection" id="sele">
-                    <option value="date">Date</option>
-                    <option value="plus_petit_grand">Prix-/+</option>
-                    <option value="plus_grand_petit">Prix+/-</option>
-                </select>
-            </form>
-        </div>
-    </div>
-</div>
-<div class="container">
+
+<div class="container officiel">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <h2>@yield('titre_page')</h2>
+            <h2 class="titre">@yield('titre_page')</h2>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             <!--------resultat de la cherche-------->
-            <h2>@yield('resultat')</h2>
+            <div class="resultats">
+                <h2>@yield('resultat')</h2>
+            </div>
         </div>
     </div>
 </div>
@@ -57,8 +51,8 @@
 @yield('Biensvendus')
 @yield('gestion')
 @yield('Estimationdubien')
-<footer>
-    <div class="container-fluid">
+<footer class="officiel">
+    <div class="container-fluid officiel">
         <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-4">
                 <a href="#">
@@ -88,7 +82,7 @@
         </div>
     </div>
 </footer>
-@livewireScripts
+
 <script src="{{ asset("bootstrap/js/bootstrap.bundle.min.js") }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
 <script src="{{ asset('lightbox/dist/js/lightbox.min.js') }}"></script>

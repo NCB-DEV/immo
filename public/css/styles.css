@@ -1,0 +1,63 @@
+.officiel
+{
+    position: relative;
+    top: 70px;
+    z-index: -2;
+}
+.immo{
+    margin: 20px;
+    position: relative;
+
+}
+.titre{
+   color: goldenrod;
+   margin-top: 10px;
+}
+footer{
+    background-color: black;
+}
+.sponsorise{
+    position: relative;
+    top: 70px;
+}
+.element{
+    margin-bottom: 20px;
+    border: 1px  goldenrod solid;
+}
+.element img{
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.element a{
+    text-decoration: none;
+}
+.prix{
+    position: relative;
+    bottom: 190px;
+    left: 20px;
+    font-weight: bold;
+    background-color: rgb(8, 8, 8);
+    opacity: 0.5;
+    border-radius: 5px;
+    color: white;
+    width: 20%;
+}
+.prix span{
+    opacity: 1;
+}
+.element .usage{
+    background-color: goldenrod;
+    position: relative;
+    bottom: 10px;
+    left: 3%;
+    color: black;
+    padding: 0 auto;
+}
+.element .usage span{
+    position: relative;
+    left: 30%;
+}
+.desc{
+    color: black;
+    text-align: justify;
+}
