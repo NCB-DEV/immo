@@ -22,8 +22,8 @@ A vendre
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
 
-            <div class="container-fluid">
-                <div class="row">
+            <div  class="container-fluid">
+                <div class="row" id="sponsorise">
 
                     @foreach ($boost as $boosts)
 
@@ -47,7 +47,7 @@ A vendre
                                             {{ $boosts->description }}
                                         </div>
                                         <div class="col-4 desc">
-                                            <p>Identifiant:{{ $boosts->id }}</p>
+                                            <p>numéro:{{ $boosts->id }}</p>
                                         </div>
                                         <div class="col-8 desc">
                                             <h5>+243 821 248 030</h5>
@@ -76,7 +76,7 @@ A vendre
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
 
-            <div id="" class="container-fluid">
+            <div id="nosponsorise" class="container-fluid">
                 <div class="row">
 
                     @foreach ($nonboost as $boosts)

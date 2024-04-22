@@ -12,12 +12,15 @@ input.addEventListener('input',function(){
             const data=JSON.parse(xrh.responseText);
             const titre=document.getElementById('titre');
             data.forEach( person =>{
+                if(person.boost=="oui"){}
+/*
                 if(person.boost=="oui"){
 
-                const h6=document.createElement('h6');
-                h6.textContent="sponsorisé"
                const row=document.getElementById("sponsorise");
-                    row.appendChild(h6);
+               row.classList.add('row')
+               const h6=document.createElement('h6');
+               h6.textContent="sponsorisé"
+               row.appendChild(h6);
                const divElement=document.createElement('div');
                const text=document.getElementById('')
                divElement.classList.add('element');
@@ -36,19 +39,16 @@ input.addEventListener('input',function(){
                const img=document.createElement('img');
 
                photos.appendChild(img);
-               fetch('/getImg/'+person.photo2)
-               .then(response => response.text())
-               .then(url => {
-                img.setAttribute('src',url);
 
-               })
 
                sponsoirise.appendChild(photos);
                a.appendChild(sponsoirise);
-                img.style.width="200px";
-                img.style.objectifFit="200px";
+                img.style.width="100%";
+                img.style.objectifFit="conver";
                 img.style.height="200px";
+                img.src="http://192.168.162.153:8000/storage/"+person.photo2;
                sponsoirise.classList.add('sponsoirise')
+
 
                //container qui contiendra les info
                const rows=document.createElement('div')
@@ -110,9 +110,9 @@ input.addEventListener('input',function(){
                 ad.classList.add("desc");
 
                 const spanv=document.createElement('span');
-                spanv.textContent="V."+person.ville;
+                spanv.textContent="Adresse:V."+person.ville+", ";
                 const spanc=document.createElement('span');
-                spanc.textContent="C."+person.communie;
+                spanc.textContent="C."+person.communie+", ";
                 const spanq=document.createElement('span');
                 spanq.textContent="Q."+person.quartier;
                 ad.appendChild(spanv);
@@ -139,13 +139,14 @@ input.addEventListener('input',function(){
                sponsoirise.appendChild(rows);
 
                divElement.appendChild(a);
+               row.innerHTML=" ";
                row.append(divElement)
                 console.log(person.description);
             }
             if(person.boost=="non"){
 
 
-                const row=document.getElementById("sponsorise");
+                const row=document.getElementById("nosponsorise");
 
                 const divElement=document.createElement('div');
                 const text=document.getElementById('')
@@ -165,16 +166,11 @@ input.addEventListener('input',function(){
                 const img=document.createElement('img');
 
                 photos.appendChild(img);
-                fetch('/getImg/'+person.photo2)
-                .then(response => response.text())
-                .then(url => {
-                 img.setAttribute('src',url);
-
-                })
+                img.src="http://192.168.162.153:8000/storage/"+person.photo2;
 
                 sponsoirise.appendChild(photos);
                 a.appendChild(sponsoirise);
-                 img.style.width="200px";
+                 img.style.width="100%";
                  img.style.objectifFit="200px";
                  img.style.height="200px";
                 sponsoirise.classList.add('sponsoirise')
@@ -258,20 +254,15 @@ input.addEventListener('input',function(){
 
                  spand.textContent="Date & heure de publication:"+person.created_at;
                  d.appendChild(spand);
-
                  rows.appendChild(d);
-
-
-
-
-
                 sponsoirise.appendChild(rows);
 
                 divElement.appendChild(a);
+                row.innerHTML=" ";
                 row.append(divElement)
                  console.log(person.description);
              }
-
+*/
             })
         }
         else{
