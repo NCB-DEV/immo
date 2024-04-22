@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
-    @livewireStyles
+
 @include('templates.menu')
 <div class="container officiel">
     <div class="row">
@@ -21,13 +21,12 @@
         </div>
     </div>
 </div>
-<div class="container-fluid officiel">
+<div class="container-fluid recherche">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-            <form action="#" method="post">
-                @csrf
-                <input type="text" name="recherche" id="" placeholder=" Chercher des propriétés ici" class="form-control w-100">
-            </form>
+
+                <input type="text" name="recherche" id="search" placeholder=" Chercher des propriétés ici" class="form-control w-100">
+
         </div>
     </div>
 </div>
@@ -45,7 +44,11 @@
         </div>
     </div>
 </div>
-
+<div class="container">
+    <div class="row">
+        <div class="col-12 results-container" id="result-container"></div>
+    </div>
+</div>
 @yield('accuei')
 @yield('alouer')
 @yield('Biensvendus')
@@ -90,6 +93,7 @@
 <script src="{{ asset('js/share.js') }}"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/typelighter.min.js') }}"></script>
+<script src="{{ asset('js/ajax.js') }}"></script>
 </body>
 
 </html>

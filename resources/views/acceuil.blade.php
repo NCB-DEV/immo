@@ -17,6 +17,7 @@ A vendre
 </div>
 @endsection
 @section('accuei')
+
 <div class="container sponsorise">
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
@@ -27,11 +28,13 @@ A vendre
                     @foreach ($boost as $boosts)
 
                             <div class="col-sm-12 col-md-4 col-lg-4 element ">
+
                                 <h6> sponsorisé</h6>
                                 <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                                 <div class="sponsoirise">
                                     <div class="photo">
-                                        <img style="width: 200px; objectif-fit:cover; height:200px" class="w-100" src="{{ asset('storage/'.$boosts->photo2 ) }}" >
+                                        <img style="width: 200px; objectif-fit:cover; height:200px"
+                                         class="w-100" src="{{ asset('storage/'.$boosts->photo2 ) }}" >
                                     </div>
                                     <div class="row">
                                         <div class="col-6 prix">
@@ -73,12 +76,13 @@ A vendre
     <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
 
-            <div class="container-fluid">
+            <div id="" class="container-fluid">
                 <div class="row">
 
                     @foreach ($nonboost as $boosts)
                         @if ($boosts->usages="vendre")
                         <div class="col-sm-12 col-md-4 col-lg-4 element ">
+
                             <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                             <div class="sponsoirise">
                                 <div class="photo">
@@ -117,6 +121,7 @@ A vendre
 
                     @endforeach
                     {{ $nonboost->links() }}
+
                 </div>
             </div>
 

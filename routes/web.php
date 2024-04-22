@@ -1,18 +1,19 @@
 <?php
 
+use GuzzleHttp\Middleware;
 use FontLib\Table\Type\name;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Menu;
 use App\Http\Controllers\Compte;
 use App\Http\Controllers\Accueil;
 use Illuminate\Support\Facades\App;
+use App\Http\Controllers\VenteMaison;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VendreController;
 use App\Http\Controllers\LocationControleur;
-use App\Http\Controllers\VenteMaison;
-use GuzzleHttp\Middleware;
 
 //  Vente-Immeubles
-
+Route::get('/serche-house',[Accueil::class,'serchehouse']);
 //accueil
 Route::get('/voir-la-proprieté/{id}',[Accueil::class,'afficherPropriete'])->name('voir-la-proprieté');
 Route::get('/voir-l-immeuble/{id}',[Accueil::class,'voirlimmeuble'])->name('voir-l-immeuble');
@@ -55,3 +56,8 @@ Route::post('/enregistrer-un-bien',[Compte::class,'enregistrerunbien'])->name('e
 Route::post('/modifier-un-bien',[Compte::class,'modifierunbien'])->name('modifier-un-bien');
 Route::post('/modifier-maisons',[Compte::class,'modifiermaisons'])->name('modifier-maisons');
 //Route::post('/Connexion-utilisateur',[Compte::class,'Connexionutilisateur'])->name('midlware');
+
+Route::get('/getImg/{img}',function(){
+    return asset("storage/".$img);
+});
+
