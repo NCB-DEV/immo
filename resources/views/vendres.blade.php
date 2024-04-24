@@ -3,7 +3,7 @@
 Vendre un bien
 @endsection
 @section('vendres')
-<div class="container-fluid">
+<div class="container-fluid vendres">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -17,14 +17,14 @@ Vendre un bien
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
     </div>
 </div>
-<div class="container">
+<div class="container imgControl">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <div class="imgControl">
-                <img src="{{ asset('img/accueil1.jpeg') }}" alt="">
+            <div class="">
+                <img  src="{{ asset('img/accueil1.jpeg') }}" alt="">
             </div>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6 imgControle">
             @error('photo1')
                            <div class="alert alert-danger alert-dismissible fade show MESSAGE" role="alert">
                                 {{ $message }}
@@ -100,43 +100,43 @@ Vendre un bien
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="photo1" class="w-100">Photo principale<span style="color: red">*</span></label>
-                            <input type="file" name="photo1" class="w-100 control-form" id="photo1">
+                            <input type="file" name="photo1" class="w-100 form-control" id="photo1">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="photo2" class="w-100">Photo sécondaire 1<span style="color: red">*</span></label>
-                            <input type="file" name="photo2" class="w-100 control-form" id="photo2">
+                            <input type="file" name="photo2" class="w-100 form-control" id="photo2">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="photo3" class="w-100">Photo sécondaire 2<span style="color: red">*</span></label>
-                            <input type="file" name="photo3" class="w-100 control-form" id="photo3">
+                            <input type="file" name="photo3" class="w-100 form-control" id="photo3">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <label for="photo4" class="w-100">Photo sécondaire 3<span style="color: red">*</span></label>
-                            <input type="file" name="photo4" class="w-100 control-form" id="photo4">
+                            <input type="file" name="photo4" class="w-100 form-control" id="photo4">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="photo5" class="w-100">Photo sécondaire 4<span style="color: red">*</span></label>
-                            <input type="file" name="photo5" class="w-100 control-form" id="photo5">
+                            <input type="file" name="photo5" class="w-100 form-control" id="photo5">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="prix" class="w-100">Prix<span style="color: red">*</span></label>
-                            <input type="num" name="prix" class="w-100 control-form" id="prix" placeholder=" Prix" value="{{ old('prix') }}">
+                            <input type="num" name="prix" class="w-100 form-control" id="prix" placeholder=" Prix" value="{{ old('prix') }}">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="ville" class="w-100">Ville<span style="color: red">*</span></label>
-                            <input type="text" name="ville" class="w-100 control-form" id="vile" placeholder=" Ville" value="{{ old('ville') }}">
+                            <input type="text" name="ville" class="w-100 form-control" id="vile" placeholder=" Ville" value="{{ old('ville') }}">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="com" class="w-100">Commune<span style="color: red">*</span></label>
-                            <input type="text" name="com" class="w-100 control-form" id="com" placeholder=" Commune" value="{{ old('com') }}">
+                            <input type="text" name="com" class="w-100 form-control" id="com" placeholder=" Commune" value="{{ old('com') }}">
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <label for="quart" class="w-100">Quartier<span style="color: red">*</span></label>
-                            <input type="text" name="quart" class="w-100 control-form" id="quart" placeholder=" Quartier" value="{{ old('quart') }}">
+                            <input type="text" name="quart" class="w-100 form-control" id="quart" placeholder=" Quartier" value="{{ old('quart') }}">
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <label for="type" class="w-100">Type de propriété<span style="color: red">*</span></label>
-                            <select name="type" class="w-100 select-control" id="type" value="{{ old('type') }}">
+                            <select name="type" class="w-100 form-select" id="type" value="{{ old('type') }}">
                                 <option value="maison">Maison</option>
                                 <option value="appart">Appartement</option>
                                 <option value="parcelle">Parcelle</option>
@@ -148,7 +148,7 @@ Vendre un bien
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
                             <label for="type" class="w-100">Usage<span style="color: red">*</span></label>
-                            <select name="usage" class="w-100 select-control" id="type" value="{{ old('usage') }}">
+                            <select name="usage" class="w-100 form-select" id="type" value="{{ old('usage') }}">
                                 <option value="location">Location</option>
                                 <option value="vendre">A vendre</option>
                             </select>
@@ -159,7 +159,7 @@ Vendre un bien
                             <input type="hidden" name="id_pro" value="{{ $proprietaire->id }}">
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
-                            <input value="Enregistrer" type="submit" class="w-100 btb btn-dark control-form" id="com">
+                            <input value="Enregistrer" type="submit" class="w-100 btb btn-dark form-control" style="margin-top: 20px" id="com">
                         </div>
                     </div>
                 </div>

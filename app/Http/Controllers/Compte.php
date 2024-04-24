@@ -119,7 +119,7 @@ class Compte extends Controller
     public function supprimermaison($id){
         $parcel=Proprietes::find($id);
         $parcel->delete();//par
-        $parcels=Proprietes::find($id)->SimplePaginate(8);
+        $parcels=Proprietes::find($id)->SimplePaginate(9);
         return back()->with("supprimer","la parcelle a été supprimer avec succès");
     }
     public function supprimerparcelle($id){
@@ -181,8 +181,8 @@ class Compte extends Controller
     }
     public function Gestiondepropriete($proprietaires){
         $proprietaire=Proprietaires::find($proprietaires);
-        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(8);
-        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(8);
+        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(9);
+        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(9);
         if(!$proprietaire){
             return abort(404);
         }
@@ -191,8 +191,8 @@ class Compte extends Controller
     }
     public function Bienvendus($proprietaires){
         $proprietaire=Proprietaires::find($proprietaires);
-        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(8);
-        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(8);
+        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(9);
+        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(9);
         if(!$proprietaire){
             return abort(404);
         }
@@ -201,8 +201,8 @@ class Compte extends Controller
     }
     public function Gestiondesproprietes($proprietaires){
         $proprietaire=Proprietaires::find($proprietaires);
-        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(8);
-        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(8);
+        $propr=Proprietes::where('idpro',$proprietaires)->SimplePaginate(9);
+        $par=Parcele::where('idpro',$proprietaires)->SimplePaginate(9);
         if(!$proprietaire){
             return abort(404);
         }

@@ -3,7 +3,7 @@
 Gestion des maisons
 @endsection
 @section('maison')
-<div class="container-fluid">
+<div class="container-fluid gest">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -13,12 +13,12 @@ Gestion des maisons
             @if ($proprietaire->civilite=="mme")
                  <h2>Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
-            <a href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
+            <a class="btn btn-dark" style="text-align:left"  href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
         </div>
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid gests ">
     <div class="row">
         <div class="col-12">
             @if (session()->has("supprimer"))
@@ -44,7 +44,7 @@ Gestion des maisons
                    @endif
 
 
-            <div class="container-fluid">
+            <div class="container-fluid gestt">
                 <div class="row">
 
                         @foreach ($pro as $pars)

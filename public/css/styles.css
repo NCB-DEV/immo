@@ -42,10 +42,10 @@ footer{
     left: 20px;
     font-weight: bold;
     background-color: rgb(8, 8, 8);
-    opacity: 0.5;
+
     border-radius: 5px;
-    color: white;
-    width: 20%;
+    color: yellow;
+    width: 50%;
 }
 .prix span{
     opacity: 1;
@@ -54,9 +54,9 @@ footer{
     background-color: goldenrod;
     position: relative;
     bottom: 10px;
-    left: 3%;
+    right: 27%;
     color: black;
-    padding: 0 auto;
+
 }
 .element .usage span{
     position: relative;

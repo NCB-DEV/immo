@@ -9,15 +9,15 @@ use Illuminate\Http\Request;
 class Menu extends Controller
 {
     public function Alouer(){
-        $boostParcel=Parcele::where("boost","oui")->inRandomOrder()->take(6)->get();
+        $boostParcel=Parcele::where("boost","oui")->inRandomOrder()->take(12)->get();
         $idsboost=$boostParcel->pluck('id');
-        $parcelNorm=Parcele::where('boost','non')->orWhereNull('boost')->inRandomOrder()->SimplePaginate(6);
+        $parcelNorm=Parcele::where('boost','non')->orWhereNull('boost')->inRandomOrder()->SimplePaginate(9);
         return view('Alouer',['boostParcel'=>$boostParcel,'parcelNorm'=>$parcelNorm]);
     }
     public function LocationImmeuble(){
         $boostParcel=Proprietes::where("boost","oui")->inRandomOrder()->take(12)->get();
         $idsboost=$boostParcel->pluck('id');
-        $parcelNorm=Proprietes::where('boost','non')->orWhereNull('boost')->inRandomOrder()->SimplePaginate(8);
+        $parcelNorm=Proprietes::where('boost','non')->orWhereNull('boost')->inRandomOrder()->SimplePaginate(9);
         return view('LocationImmeuble',['boostParcel'=>$boostParcel,'parcelNorm'=>$parcelNorm]);
     }
     public function Biensvendus(){

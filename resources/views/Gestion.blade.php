@@ -40,7 +40,7 @@ Gestion
                             <label class="w-100" for="Civilite">Civilite<span style="color: red">*</span></label>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <select name="civilite" id="Civilite" class="select-control w-100">
+                            <select name="civilite" id="Civilite" class="form-select w-100">
                                 <option value="mr">Mr</option>
                                 <option value="mme">Mme</option>
                             </select>
@@ -78,12 +78,7 @@ Gestion
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <button class="form-control btn btn-dark">Envoyer</button>
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
+
                     </div>
                 </div>
             </form>

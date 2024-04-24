@@ -4,7 +4,7 @@
 Biens vendus
 @endsection
 @section('gestion')
-<div class="container-fluid">
+<div class="container-fluid bienv">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -14,15 +14,15 @@ Biens vendus
             @if ($proprietaire->civilite=="mme")
                  <h2>Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
-            <a href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
+            <a class="btn btn-dark form-control w-50" href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
         </div>
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid venduB">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            
+
             <div class="container-fluid">
                 <div class="row">
 
