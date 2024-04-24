@@ -12,7 +12,9 @@ input.addEventListener('input',function(){
             const data=JSON.parse(xrh.responseText);
             const titre=document.getElementById('titre');
             data.forEach( person =>{
-                if(person.boost=="oui"){}
+                if(person.boost=="oui"){
+                    
+                }
 /*
                 if(person.boost=="oui"){
 

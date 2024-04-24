@@ -1,3 +1,6 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .officiel
 {
     position: relative;
@@ -23,6 +26,7 @@ footer{
 .element{
     margin-bottom: 20px;
     border: 1px  goldenrod solid;
+    border-radius: 10px;
 }
 .element img{
     border-radius: 10px;
@@ -32,8 +36,9 @@ footer{
     text-decoration: none;
 }
 .prix{
+    margin-top: 10px;
     position: relative;
-    bottom: 190px;
+    bottom: 220px;
     left: 20px;
     font-weight: bold;
     background-color: rgb(8, 8, 8);
@@ -64,4 +69,77 @@ footer{
 .recherche{
     position: relative;
     top: 65px;
+}
+.desc
+{
+    font-family:   serif;
+}
+.voir{
+    position: relative;
+    top: 100px;
+
+}
+.image-pri{
+    border-radius: 15px;
+    box-shadow: 0px 0px 3px black;
+    position: relative;
+    top: 30px;
+}
+.info
+{
+    border-radius: 15px;
+    position: relative;
+    top: 50px;
+    color: goldenrod;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.gestion{
+position: relative;
+top: 80px;
+text-align: justify;
+margin-bottom: 20px;
+}
+.gestion li{
+    list-style:decimal;
+
+}
+.gestion ul{
+    padding-right: 20px;
+    text-align: start;
+}
+.btn{
+    margin-top: 20px;
+}
+.estimation
+{position: relative;
+    top: 100px;
+    text-align: justify;
+
+}
+.estimation input,.estimation select
+{
+    margin-bottom: 20px;
+}
+.pagence{
+    text-align:justify ;
+    position: relative;
+    top: 100px;
+}
+.contact{
+    position: relative;
+    top: 100px;
+
+}
+.contact h3{
+    text-align: center;
+}
+.ConnexionClient{
+    position: relative;
+    top: 100px;
+}
+@media(max-width:767px){
+    .imgCo,.imdConnexion{
+        display: none;
+    }
 }

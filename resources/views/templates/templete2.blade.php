@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('lightbox/dist/css/lightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 </head>
 <body>
 @include('templates.menu')

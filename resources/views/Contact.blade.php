@@ -3,23 +3,30 @@
 Contactez-nous
 @endsection
 @section("Contact")
-<div class="container">
+<div class="container-fluid contact">
     <div class="row">
         <div class="col-12">
-            Contact
+            <h3>Veillez remplir ce formulaire pour nous contacter</h3>
+        </div>
+    </div>
+</div>
+<div class="container-fluid contact">
+    <div class="row">
+        <div class="col-12">
+
             <form action="" method="post">
                 @csrf
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-6">
-                            <img src="{{ asset('img/accueil1.jpeg') }}" alt="">
+                            <img style="object-fit: cover;width:100%" class="imgCo" src="{{ asset('img/accueil1.jpeg') }}" alt="">
                         </div>
-                        <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="col-sm-12 col-md-6 col-lg-6 ">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-sm-12 col-md-6 col-lg-6 ">
                                         <label class="w-100" for="Civilite">Civilite<span style="color: red">*</span></label>
-                                        <select name="civilite" id="Civilite" class="select-control w-100 " value="{{ old('civilite') }}">
+                                        <select name="civilite" id="Civilite" class="form-select w-100 " value="{{ old('civilite') }}">
                                             <option value="mr">Mr</option>
                                             <option value="mme">Mme</option>
                                         </select>
@@ -44,7 +51,7 @@ Contactez-nous
                                     </div>
 
                                     <div class="col-12">
-                                        <label for="demande">Votre demande<span style="color: red">*</span></label>
+                                        <label for="demande">Votre message<span style="color: red">*</span></label>
                                         <textarea name="message" class="w-100 form-control" placeholder=" Message" id="demande" cols="30" rows="5" value="{{ old('message') }}"></textarea>
                                     </div>
 
@@ -54,13 +61,6 @@ Contactez-nous
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
-                        <div class="col-sm-12 col-md-6 col-lg-6"></div>
                     </div>
                 </div>
             </form>

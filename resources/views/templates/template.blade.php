@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    @livewireStyles
 </head>
 <body>
-
+    
 @include('templates.menu')
 <div class="container officiel">
     <div class="row">
@@ -18,15 +19,6 @@
             <div class="immo">
                 <span class="maison"></span>/Immobilier/@yield('titre_page')
             </div>
-        </div>
-    </div>
-</div>
-<div class="container-fluid recherche">
-    <div class="row">
-        <div class="col-sm-12 col-md-12 col-lg-12">
-
-                <input type="text" name="recherche" id="search" placeholder=" Chercher des propriétés ici" class="form-control w-100">
-
         </div>
     </div>
 </div>
@@ -93,7 +85,7 @@
 <script src="{{ asset('js/share.js') }}"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/typelighter.min.js') }}"></script>
-<script src="{{ asset('js/ajax.js') }}"></script>
+@livewireScripts
 </body>
 
 </html>

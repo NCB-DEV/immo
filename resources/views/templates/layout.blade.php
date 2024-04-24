@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/css.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/menulayout.css') }}">
 </head>
 <body>
 @include('templates.menulayout')
@@ -51,4 +52,12 @@
 </body>
 <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+<script src="{{ asset("bootstrap/js/bootstrap.bundle.min.js") }}"></script>
+<script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
+<script src="{{ asset('lightbox/dist/js/lightbox.min.js') }}"></script>
+<script src="{{ asset('dist/chart.js') }}"></script>
+<script src="{{ asset('js/share.js') }}"></script>
+<script src="{{ asset('js/menu.js') }}"></script>
+<script src="{{ asset('js/typelighter.min.js') }}"></script>
+
 </html>

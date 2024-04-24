@@ -15,7 +15,7 @@ class Menu extends Controller
         return view('Alouer',['boostParcel'=>$boostParcel,'parcelNorm'=>$parcelNorm]);
     }
     public function LocationImmeuble(){
-        $boostParcel=Proprietes::where("boost","oui")->inRandomOrder()->take(6)->get();
+        $boostParcel=Proprietes::where("boost","oui")->inRandomOrder()->take(12)->get();
         $idsboost=$boostParcel->pluck('id');
         $parcelNorm=Proprietes::where('boost','non')->orWhereNull('boost')->inRandomOrder()->SimplePaginate(8);
         return view('LocationImmeuble',['boostParcel'=>$boostParcel,'parcelNorm'=>$parcelNorm]);

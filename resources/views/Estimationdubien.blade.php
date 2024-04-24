@@ -6,27 +6,27 @@ Estimation du bien
 Estimation du bien
 @endsection
 @section('Estimationdubien')
-<div class="container">
+<div class="container estimation">
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
         <div class="col-sm-12 col-md-6 col-lg-3">
             <p>
                 NOUS CONFIER UN MANDAT C'EST: <br>
-                <strong>Vendre rapidement votre bien immobilier</strong>,grace à des clients acquéreurs qualifiés. <br>
-                <strong>Béneficier d'une présentation optimisée de votre bien immobilier</strong>:diffusion de votre annoncesur differents supports,visites  dirigées et encadrées par u agent immobilier competent. <br>
-                <strong>Vous dégager des contraintes techniques et adminitratives</strong> en vous reposant sur notre savoir-faire de professionnel de l'immobilier tout au long de la vente.
+                <strong>1.Vendre rapidement votre bien immobilier</strong>,grace à des clients acquéreurs qualifiés. <br>
+                <strong>2.Béneficier d'une présentation optimisée de votre bien immobilier</strong>:diffusion de votre annoncesur differents supports,visites  dirigées et encadrées par u agent immobilier competent. <br>
+                <strong>3.Vous dégager des contraintes techniques et adminitratives</strong> en vous reposant sur notre savoir-faire de professionnel de l'immobilier tout au long de la vente.
             </p>
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
     </div>
 </div>
-<div class="container">
+<div class="container estimation">
     <div class="row">
         <form action="" method="post">
             @csrf
             <div class="col-sm-12 col-md-6 col-lg-6">
-                <select class="select-control w-100" name="propriéte" id="propriéte">
-                    <option value="appartemente">Appartemente</option>
+                <select class="form-select w-100" name="propriéte" id="propriéte">
+                    <option value="appartemente">Appartement</option>
                     <option value="maison">Maison</option>
                     <option value="immeuble">Immeuble</option>
                     <option value="terain">Terrain</option>
@@ -46,7 +46,7 @@ Estimation du bien
             </div>
             <div class="col-4"></div>
             <div class="col-4"></div>
-            <div class="col-4">
+            <div class="col-sm-12 col-md-6 col-lg-6">
                 <button class="form-control w-100 btn btn-dark">Estimer</button>
             </div>
         </form>

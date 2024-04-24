@@ -72,7 +72,7 @@ nav h1{
     }
 
     nav .menu.show{
-        bottom: -380px;
+        bottom: -160px;
         display: flex;
         padding: auto;
         z-index: -1;

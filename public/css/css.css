@@ -1,4 +1,20 @@
-.page-link{
+.page-link {
   width: 10px;
-  color: red;
+  color: red !important;
+
+}
+.tb{
+    position: relative;
+    top: 90px;
+}
+.tabl1{
+    color: goldenrod;
+    text-align: center;
+    background: black;
+    margin: 10px;
+    padding-top:20px ;
+    text-transform:uppercase;
+}
+.tabl1 h1{
+    font-weight: bold;
 }

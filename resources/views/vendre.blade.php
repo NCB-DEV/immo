@@ -3,7 +3,7 @@
 Tableau de bord
 @endsection
 @section('vendre')
-<div class="container-fluid">
+<div class="container-fluid tb">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -14,15 +14,15 @@ Tableau de bord
                  <h2>Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
         </div>
-        
+
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid tb">
     <div class="row">
         <div class="col-sm-12 col-md-4 col-lg-4"></div>
         <div class="col-sm-12 col-md-4 col-lg-4">
-            <h2>Biens sur la plate forme</h2>
-            <canvas id="barCanvas" aria-label="chart" role="img"></canvas>
+            <h2 style="text-align: center"> sur la plate forme</h2>
+
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4"></div>
     </div>
@@ -30,37 +30,37 @@ Tableau de bord
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3>Nombre de Parcelles</h3>
-                <h2>{{ $nombreParcelle }}</h2>
+                <h1>{{ $nombreParcelle }}</h1>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3> Parcelles vendues</h3>
-                <h2>{{ $parcellesvendues }}/{{ $nombreParcelle }}</h2>
+                <h1>{{ $parcellesvendues }}/{{ $nombreParcelle }}</h1>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3>Parcelles non vendues</h3>
-                <h2>{{ $parcellesnonvendues }}/{{ $nombreParcelle }}</h2>
+                <h1>{{ $parcellesnonvendues }}/{{ $nombreParcelle }}</h1>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3>Vos immeubles</h3>
-                <h2>{{ $immeuble }}</h2>
+                <h1>{{ $immeuble }}</h1>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3>Immeubles vendus</h3>
-                <h2>{{ $immeuvendues }}/{{ $immeuble }}</h2>
+                <h1>{{ $immeuvendues }}/{{ $immeuble }}</h1>
             </div>
         </div>
         <div class="col-sm-12 col-md-4 col-lg-4">
             <div class="tabl1 border">
                 <h3>Immeubles non vendus</h3>
-                <h2>{{ $immeunonvendues }}/{{ $immeuble }}</h2>
+                <h1>{{ $immeunonvendues }}/{{ $immeuble }}</h1>
             </div>
         </div>
     </div>

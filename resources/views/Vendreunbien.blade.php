@@ -1,12 +1,12 @@
 @extends('templates.templete2')
 @section('title')
-Connextion client
+Connexion client
 @endsection
 @section('connexion')
-<div class="container">
+<div class="container ConnexionClient">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <img src="{{ asset('img/accueil1.jpeg') }}" alt="">
+            <img style="object-fit: cover;width:100%" class="imdConnexion" src="{{ asset('img/accueil1.jpeg') }}" alt="">
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             @if (session()->has("fux"))
@@ -30,7 +30,7 @@ Connextion client
                     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
-            <h1> Connectez-vous pour publier votre annonce</h1>
+            <h1 style="text-align: center"> Connectez-vous pour publier votre annonce</h1>
             <form action="{{ route('Connexion-utilisateur') }}" method="post">
                 @csrf
                 <div class="container-fluid">

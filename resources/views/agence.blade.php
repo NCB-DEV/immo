@@ -3,7 +3,7 @@
 Agence immo
 @endsection
 @section('agence')
-<div class="container">
+<div class="container estimation">
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -12,7 +12,7 @@ Agence immo
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
     </div>
 </div>
-<div class="container">
+<div class="container estimation">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -28,12 +28,12 @@ Agence immo
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
     </div>
 </div>
-<div class="container">
+<div class="container estimation">
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             <h2>L'immobilier à kinshasa</h2>
-            <img src="{{ asset('img/accueil1.jpeg') }}" alt="photo de immo">
+            <img style="object-fit: cover;width:100%" src="{{ asset('img/accueil1.jpeg') }}" alt="photo de immo">
         </div>
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
     </div>

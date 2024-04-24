@@ -3,21 +3,17 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Parcele;
 
 class Accueil extends Component
 
 {
-    public $parcelNorm;
-    public $boostParcel;
-
-    public function mount($parcelNorm,$boostParcel){
-        $this->$boostParcel=$boostParcel;
-        $this->$parcelNorm=$parcelNorm;
-    }
-
+    public $recherche;
 
     public function render()
     {
         return view('livewire.accueil');
     }
+
 }
+
