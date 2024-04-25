@@ -6,12 +6,12 @@ Tableau de bord
 <div class="container-fluid tb">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
-        <div class="col-sm-12 col-md-8 col-lg-8">
+        <div class="col-sm-12 col-md-8 col-lg-8 ">
             @if ($proprietaire->civilite=="mr")
-                 <h2>Bienvenu {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
+                 <h2 style="text-align: center">Bienvenu {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
             @if ($proprietaire->civilite=="mme")
-                 <h2>Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
+                 <h2 style="text-align: center">Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
         </div>
 

@@ -19,7 +19,7 @@ Immeuble à vendre
                     @foreach ($boostParcel as $boosts)
 
                             <div class="col-sm-12 col-md-4 col-lg-4 ">
-                                <div class="element">
+                                <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                     <h6> sponsorisé</h6>
                                     <a href="{{ route('voir-l-immeuble',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
@@ -74,7 +74,7 @@ Immeuble à vendre
                     @foreach ($parcelNorm as $boosts)
                         @if ($boosts->usages="vendre")
                         <div class="col-sm-12 col-md-4 col-lg-4 ">
-                            <div class="element">
+                            <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                 <a href="{{ route('voir-l-immeuble',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
                                         <div class="photo">

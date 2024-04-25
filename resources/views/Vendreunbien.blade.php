@@ -6,7 +6,7 @@ Connexion client
 <div class="container ConnexionClient">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <img style="object-fit: cover;width:100%" class="imdConnexion" src="{{ asset('img/accueil1.jpeg') }}" alt="">
+            <img data-aos="fade-right" data-aos-duration="3000" data-aos-once="true" style="object-fit: cover; border-radius:10px;width:100%" class="imdConnexion" src="{{ asset('img/salon1.jpeg') }}" alt="">
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             @if (session()->has("fux"))
@@ -30,6 +30,8 @@ Connexion client
                     <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
             @endif
+            <img src="{{ asset('img/logo.jpg') }}" style="width: 250px;text-align:center;margin:0 auto;position: relative;
+            left:25%" alt="">
             <h1 style="text-align: center"> Connectez-vous pour publier votre annonce</h1>
             <form action="{{ route('Connexion-utilisateur') }}" method="post">
                 @csrf
@@ -47,10 +49,10 @@ Connexion client
                         <div class="col-sm-12 col-md-6 col-lg-6">
                             <button class="form-control btn btn-dark">Connexion</button>
                         </div>
-                        <p>
+                        <p class="pas">
                             Pas de compte?<a href="{{ route('créer-un-compte') }}">Créer un compte</a>
                         </p>
-                        <p><a href="#">mot de passe oublié?</a> </p>
+
 
                     </div>
                 </div>

@@ -21,7 +21,7 @@ Vendre un bien
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="">
-                <img  src="{{ asset('img/accueil1.jpeg') }}" alt="">
+                <img data-aos-anchor="#image5" data-aos="fade-right" data-aos-duration="3000" data-aos-once="true"  src="{{ asset('img/salon2.jpeg') }}" style="border-radius: 10px" alt="">
             </div>
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6 imgControle">
@@ -93,6 +93,8 @@ Vendre un bien
                        <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                    </div>
                    @endif
+                   <img src="{{ asset('img/logo.jpg') }}" style="width: 150px;text-align:center;margin:0 auto;position: relative;
+            left:25%" alt="">
             <h2>Veillez entrer les informations sur la propriétés</h2>
             <form action="{{ route('enregistrer-un-bien') }}" method="post" enctype="multipart/form-data">
                 @csrf
@@ -140,7 +142,6 @@ Vendre un bien
                                 <option value="maison">Maison</option>
                                 <option value="appart">Appartement</option>
                                 <option value="parcelle">Parcelle</option>
-                                <option value="terrain">Terrain</option>
                                 <option value="service">Résidence de service</option>
                                 <option value="bureau">Bureau</option>
                                 <option value="entrepot">Entrepot</option>
@@ -157,8 +158,10 @@ Vendre un bien
                             <label for="desc" class="w-100">Déscription<span style="color: red">*</span></label>
                             <textarea name="desc" class="w-100 form-control" id="desc" cols="30" rows="5" placeholder="  Déscription" value="{{ old('desc') }}"></textarea>
                             <input type="hidden" name="id_pro" value="{{ $proprietaire->id }}">
+                            <h6>en cliquant sur enregistrer,vous confirmer que vous avez lu et compris les conditions d'utilisation de nos services et que vous acceptez de verser à notre agence une commission de 35% du prix de vente ou de location du bien immobilier en cas de transaction réussie. </h6>
                         </div>
                         <div class="col-12 col-md-6 col-lg-6">
+
                             <input value="Enregistrer" type="submit" class="w-100 btb btn-dark form-control" style="margin-top: 20px" id="com">
                         </div>
                     </div>

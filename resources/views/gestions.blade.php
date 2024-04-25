@@ -50,10 +50,10 @@ Gestion des propriétés
 
                         @foreach ($par as $pars)
                         @if ($pars->avis!="vendu")
-                        <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="col-sm-12 col-md-4 col-lg-4 mt-10" style="margin-bottom: 20px">
                             <div class="parcele">
                                 <div class="image">
-                                    <img style="object-fit: cover; height:300px" class="w-100" src="{{ asset('storage/'.$pars->photo2 ) }}" alt="{{ asset($pars->photo2) }}">
+                                    <img style="object-fit: cover; height:300px;border-radius:10px;margin-top:20px" class="w-100" src="{{ asset('storage/'.$pars->photo2 ) }}" alt="{{ asset($pars->photo2) }}">
                                 </div>
                                 <div class="info">
                                     <p>Prix:{{ $pars->prix }}$ </p><p>Déscription:{{ $pars->description }}</p>

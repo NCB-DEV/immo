@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    @livewireStyles
+    <link rel="stylesheet" href="{{ asset('aos/aos.css') }}">
+
 </head>
 <body>
-    
+
 @include('templates.menu')
 <div class="container officiel">
     <div class="row">
@@ -46,38 +47,7 @@
 @yield('Biensvendus')
 @yield('gestion')
 @yield('Estimationdubien')
-<footer class="officiel">
-    <div class="container-fluid officiel">
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="#">
-                    <h1>logo</h1>
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="{{ route('Vendre-un-bien') }}">vendre</a>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="#">acheter</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h2>RESEAUX SOCIAUX</h2>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <h2>A PROPOS DE NOUS</h2>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-                <a href="#">conditions générales d'utilisation</a>
-                <a href="#">Politique de confidentialité</a>
-                <a href="#">Polique de cookie</a>
-                <a href="#">réglage des cookies</a>
-            </div>
-        </div>
-    </div>
-</footer>
-
+@include('templates.footer')
 <script src="{{ asset("bootstrap/js/bootstrap.bundle.min.js") }}"></script>
 <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
 <script src="{{ asset('lightbox/dist/js/lightbox.min.js') }}"></script>
@@ -85,6 +55,10 @@
 <script src="{{ asset('js/share.js') }}"></script>
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/typelighter.min.js') }}"></script>
+<script src="{{ asset('aos/aos.js') }}"></script>
+<<script>
+    AOS.init();
+</script>
 @livewireScripts
 </body>
 

@@ -3,7 +3,7 @@
 Modifier une maison
 @endsection
 @section('mofimaison')
-<div class="container-fluid">
+<div class="container-fluid modif">
     <div class="row">
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
         <div class="col-sm-12 col-md-8 col-lg-8">
@@ -13,12 +13,12 @@ Modifier une maison
             @if ($proprietaire->civilite=="mme")
                  <h2>Bienvenue {{ $proprietaire->civilite }} {{ $proprietaire->nom }} {{ $proprietaire->postnom }}</h2>
             @endif
-            <a href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
+            <a class="btn btn-dark" href=" {{ route('vendre-des-proprietes',['proprietaire'=>$proprietaire])  }}">vendre des proprietes</a>
         </div>
         <div class="col-sm-12 col-md-2 col-lg-2"></div>
     </div>
 </div>
-<div class="containter">
+<div class="containter modifs">
     <div class="row">
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
         <div class="col-sm-12 col-md-6 col-lg-6">
@@ -27,7 +27,7 @@ Modifier une maison
         <div class="col-sm-12 col-md-3 col-lg-3"></div>
     </div>
 </div>
-<div class="container">
+<div class="container modifs">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
             <div class="inforenregistrer">
@@ -193,7 +193,7 @@ Modifier une maison
                         <div class="row">
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <label for="photo1" class="w-100">Photo principale<span style="color: red">*</span></label>
-                                <input type="file" name="photo1" class="w-100 control-form" id="photo1">
+                                <input type="file" name="photo1" class="w-100 form-control" id="photo1">
                             </div>
                             <div class="col-sm-12 col-md-6 col-lg-6">
                                 <label for="photo2" class="w-100">Photo sécondaire 1<span style="color: red">*</span></label>

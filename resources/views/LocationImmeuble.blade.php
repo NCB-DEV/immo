@@ -19,7 +19,7 @@ Immeuble à louer
                     @foreach ($boostParcel as $boosts)
 
                             <div class="col-sm-12 col-md-4 col-lg-4 ">
-                                <div class="element">
+                                <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                     <h6> sponsorisé</h6>
                                     {{ dd($boosts->id) }}
                                     <a href="{{ route('voir-l-immeuble',['id'=>$boosts->id]) }}">
@@ -75,7 +75,7 @@ Immeuble à louer
 
                         @if ($boosts->usages="location")
                         <div class="col-sm-12 col-md-4 col-lg-4 ">
-                            <div class="element">
+                            <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                 <a href="{{ route('voir-l-immeuble',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
                                         <div class="photo">

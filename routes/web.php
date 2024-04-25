@@ -17,7 +17,12 @@ Route::get('/serche-house',[Accueil::class,'serchehouse']);
 //accueil
 Route::get('/voir-la-proprieté/{id}',[Accueil::class,'afficherPropriete'])->name('voir-la-proprieté');
 Route::get('/voir-l-immeuble/{id}',[Accueil::class,'voirlimmeuble'])->name('voir-l-immeuble');
-
+Route::get('/condition',function(){
+    return view('condition');
+})->name('condition');
+Route::get('/contrat',function(){
+    return view('contrat');
+})->name('contrat');
 Route::get('/',[Accueil::class,'Accueil']);
 Route::get('/',[Accueil::class,'Accueil']);
 //menu

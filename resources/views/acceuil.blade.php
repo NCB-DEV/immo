@@ -27,10 +27,10 @@ A vendre
 
                     @foreach ($boost as $boosts)
 
-                            <div class="col-sm-12 col-md-4 col-lg-4  ">
-                                <div class="element">
+                            <div class="col-sm-12 col-md-4 col-lg-4  " >
+                                <div   class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                     <h6> sponsorisé</h6>
-                                    <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
+                                    <a  href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
                                         <div class="photo">
                                             <img style="width: 200px; objectif-fit:cover; height:200px"
@@ -84,7 +84,7 @@ A vendre
                     @foreach ($nonboost as $boosts)
                         @if ($boosts->usages="vendre")
                         <div class="col-sm-12 col-md-4 col-lg-4 ">
-                            <div class="element">
+                            <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                 <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
                                         <div class="photo">

@@ -3,7 +3,7 @@
 Propriété-{{ $parcele->id }}
 @endsection
 @section('afficherpropriete')
-<div class="container voir">
+<div class="container voir" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
     <div class="row">
 
         <div class="col-sm-12 col-md-2 col-lg-2 "></div>
