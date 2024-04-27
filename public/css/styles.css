@@ -17,7 +17,7 @@ body{
    margin-top: 10px;
 }
 footer{
-    background-color: black;
+    background-color: rgb(207, 65, 65);
 }
 .sponsorise{
     position: relative;
@@ -142,7 +142,7 @@ margin-bottom: 20px;
 .footer{
     background-color: black;
     position: relative;
-    top: 150px;
+    top: 200px;
     color: goldenrod;
 }
 .Service{
@@ -169,6 +169,28 @@ margin-bottom: 20px;
 }
 .pas a{
     text-decoration: none;
+}
+.enre{
+    position: relative;
+    top: 100px;
+}
+.enre img{
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+}
+.recherc{
+    position: relative;
+    top: 100px;
+
+}
+.officiel{
+    position: relative;
+    top: 100px;
+}
+.sponsorise{
+    position: relative;
+    top: 100px;
 }
 @media(max-width:767px){
     .imgCo,.imdConnexion{

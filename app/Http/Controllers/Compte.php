@@ -22,8 +22,8 @@ class Compte extends Controller
     public function vendus($id){
         $parcelle=Proprietes::find($id);
 
-       $parcelle->avis="vendu";
-       $mod=$parcelle->save();
+         $parcelle->avis="vendu";
+         $mod=$parcelle->save();
 
         if($mod){
             return back()->with('vendu',' la propriété a été marquée vendue');
@@ -113,7 +113,11 @@ class Compte extends Controller
     }
     public function modifierparcelle($id,$pro){
         $parcel=Parcele::find($id);
-        $proprietaire=Proprietaires::find($pro);
+
+        if($proprietaire=!Proprietaires::find(auth()->$pro));
+        {
+            return view('Vendreunbien');
+        }
         return view('mofiierParcel',['parcel'=>$parcel,'proprietaire'=>$proprietaire]);
     }
     public function supprimermaison($id){

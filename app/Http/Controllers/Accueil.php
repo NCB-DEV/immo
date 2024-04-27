@@ -19,6 +19,24 @@ class Accueil extends Controller
         $parcele=Proprietes::find($id);
         return view('voirlimmeuble',["parcele"=>$parcele]);
     }
+    public function serchehouseP(Request $req){
+        $serch=$req->query("id");
+        $reqd=  Parcele::query();
+        if($serch){
+          $reqd->where(function ($q) use ($serch){
+              $q->where("prix",'like','%'.$serch.'%')
+              ->orWhere("usages",'like','%'.$serch.'%')
+              ->orWhere("ville",'like','%'.$serch.'%')
+              ->orWhere("quartier",'like','%'.$serch.'%')
+              ->orWhere("communie",'like','%'.$serch.'%')
+              ->orWhere("description",'like','%'.$serch.'%');
+          });
+        }
+        $parcele =$reqd->get();
+
+                  return response()->json($parcele);
+
+    }
     public function serchehouse(Request $req){
         $serch=$req->query("id");
       $reqd=  Parcele::query();

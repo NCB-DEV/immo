@@ -3,10 +3,10 @@
 Enregistrement client
 @endsection
 @section('enregistrement')
-<div class="container">
+<div class="container enre">
     <div class="row">
         <div class="col-sm-12 col-md-6 col-lg-6">
-            <img src="{{ asset('img/accueil1.jpeg') }}" alt="">
+            <img data-aos="fade-up" data-aos-duration="3000" data-aos-once="true" src="{{ asset('img/ville.jpeg') }}" alt="">
         </div>
         <div class="col-sm-12 col-md-6 col-lg-6">
             @if (session()->has("success"))
@@ -79,15 +79,16 @@ Enregistrement client
                                 <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
                           </div>
                         @enderror
-
-            <h1> Créer un compte</h1>
+                        <img src="{{ asset('img/logo.jpg') }}" style="width: 150px;text-align:center;margin:0 auto;position: relative;
+                        left:40%" alt="">
+            <h1 style="text-align: center"> Créer un compte</h1>
             <form action="{{ route('creation-du-compte') }}" method="post">
                 @csrf
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-12">
-                            <label class="w-100" for="Civilite">Civilite<span style="color: red">*</span></label>
-                                <select name="civilite" id="Civilite" class="select-control w-100" value="{{ old('civilite') }}">
+                            <label class="w-100 " for="Civilite">Civilite<span style="color: red">*</span></label>
+                                <select name="civilite" id="Civilite" class="form-select w-100" value="{{ old('civilite') }}">
                                     <option value="mr">Mr</option>
                                     <option value="mme">Mme</option>
                                 </select>

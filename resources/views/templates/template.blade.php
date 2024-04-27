@@ -14,6 +14,16 @@
 <body>
 
 @include('templates.menu')
+
+<div class="container recherc">
+    <div class="row">
+        <div class="col-12">
+            <div class="rechercher">
+                <input class="form-control" type="text" name="" placeholder=" Trouvez un bien immobilier rapidement" id="search">
+            </div>
+        </div>
+    </div>
+</div>
 <div class="container officiel">
     <div class="row">
         <div class="col-sm-12">
@@ -56,9 +66,12 @@
 <script src="{{ asset('js/menu.js') }}"></script>
 <script src="{{ asset('js/typelighter.min.js') }}"></script>
 <script src="{{ asset('aos/aos.js') }}"></script>
-<<script>
+
+
+<script>
     AOS.init();
 </script>
+
 @livewireScripts
 </body>
 

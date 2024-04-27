@@ -14,12 +14,14 @@ A louer
         <div class="col-sm-12 col-md-12 col-lg-12">
 
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" id="sponsorise">
 
                     @foreach ($boostParcel as $boosts)
-
-                            <div class="col-sm-12 col-md-4 col-lg-4  ">
-                                <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
+                        @if ($boosts->usages="location")
+                            @if ($boosts->avis="nom vendu")
+                               
+                              <div class="col-sm-12 col-md-6 col-lg-4  ">
+                                   <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                     <h6> sponsorisé</h6>
                                     <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
@@ -56,6 +58,10 @@ A louer
                                 </div>
 
                             </div>
+                            @endif
+
+                        @endif
+
 
                     @endforeach
                 </div>
@@ -69,11 +75,11 @@ A louer
         <div class="col-sm-12 col-md-12 col-lg-12">
 
             <div class="container-fluid">
-                <div class="row">
+                <div class="row" id="nosponsorise">
 
                     @foreach ($parcelNorm as $boosts)
                         @if ($boosts->usages="location")
-                        <div class="col-sm-12 col-md-4 col-lg-4  ">
+                        <div class="col-sm-12 col-md-6 col-lg-4  ">
                             <div class="element" data-aos-anchor="#image5" data-aos="fade-up" data-aos-duration="3000" data-aos-once="true">
                                 <a href="{{ route('voir-la-proprieté',['id'=>$boosts->id]) }}">
                                     <div class="sponsoirise">
@@ -120,5 +126,7 @@ A louer
 
         </div>
     </div>
-</div>@endsection
+</div>
+<script src="{{ asset('js/ajaxlocParcel.js') }}"></script>
+@endsection
 

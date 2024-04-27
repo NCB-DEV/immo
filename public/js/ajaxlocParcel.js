@@ -6,23 +6,22 @@ input.addEventListener('input',function(){
     xrh.open("GET",'/serche-house?id='+valeur);
     xrh.onload=function(){
         if(xrh.status===200){
-
             const data=JSON.parse(xrh.responseText);
             const titre=document.getElementById('titre');
             const spo=document.getElementById('sponsorise');
             spo.innerHTML="";
+            console.log(xrh.responseText);
             const div=document.getElementById('nosponsorise');
             div.innerHTML="";
             data.forEach( person =>{
-                if(( person.avis=="nom vendu") && (person.boost=="oui") && (person.usages=="vendre")){
-                    console.log(person.avis)
+                if(( person.avis=="nom vendu") && (person.boost=="oui") && (person.usages=="location")){
+                    console.log("ok"+person.avis)
                     div.classList.add('row');
                     const divE=document.createElement('div');
                     divE.classList.add('col-sm-12');
                     divE.classList.add('col-md-6');
                     divE.classList.add('col-lg-4');
                     spo.appendChild(divE);
-
                     const elem=document.createElement('div');
                     elem.classList.add('element')
                     const h6=document.createElement('h6');
@@ -117,7 +116,7 @@ input.addEventListener('input',function(){
 
                     spo.appendChild(divE);
                 }
-                if(( person.avis=="nom vendu") && (person.boost=="non") && (person.usages=="vendre")){
+                if(( person.avis=="nom vendu") && (person.boost=="non") &&(person.usages=="location")){
                     console.log(person.avis)
                     div.classList.add('row');
                     const divE=document.createElement('div');
